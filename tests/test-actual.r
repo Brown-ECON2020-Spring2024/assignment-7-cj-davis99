@@ -7,7 +7,7 @@ source("code/run_linear_reg.r")
 test_that("Testing beta coefficient", {
     expect_equal(
         as.numeric(model$coefficient[2]), ## Named numeric was throwing error
-        expected = 0.00076, 
+        expected = 1.00076, ## Broke this by adding 1 to expected output
         tolerance = 0.0001
     )
 })
